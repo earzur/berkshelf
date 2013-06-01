@@ -65,6 +65,18 @@ module Berkshelf
         end
       end
 
+      # Update the given repo_path with latest commits from ref
+      #
+      # @param [String] repo_path
+      #   path to a Git repo on disk
+      # @param [String] ref
+      #   reference to pull
+      def pull(repo_path,ref)
+        Dir.chdir repo_path do
+          git("pull","origin",ref)
+        end
+      end
+
       # Return the sha revision for the given reference in the given repository
       #
       # @param [String] repo_path
