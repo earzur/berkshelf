@@ -113,7 +113,7 @@ module Berkshelf
       end
 
       def cached?(destination)
-        revision_path(destination) && File.exists?(revision_path(destination))
+        revision_path(destination) && File.exists?(revision_path(destination)) && git.pull(revision_path(destination),branch_name)
       end
 
       def local_revision(destination)
