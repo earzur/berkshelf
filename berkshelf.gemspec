@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'chozo', '>= 0.6.1'
   s.add_dependency 'hashie', '>= 2.0.2'
   s.add_dependency 'minitar'
-  s.add_dependency 'json', '>= 1.5.0'
+  s.add_dependency 'json'
   s.add_dependency 'multi_json', '~> 1.5'
   s.add_dependency 'solve', '>= 0.4.2'
   s.add_dependency 'thor', '~> 0.18.0'
